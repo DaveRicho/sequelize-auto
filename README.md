@@ -1,12 +1,15 @@
 # Sequelize-Auto
 
-[![Build Status](http://img.shields.io/travis/sequelize/sequelize-auto/master.svg)](https://travis-ci.org/sequelize/sequelize-auto) [![Dependency Status](https://david-dm.org/sequelize/sequelize-auto.svg)](https://david-dm.org/sequelize/sequelize-auto) [![Code Climate](https://codeclimate.com/github/sequelize/sequelize-auto/badges/gpa.svg)](https://codeclimate.com/github/sequelize/sequelize-auto) [![Test Coverage](https://codeclimate.com/github/sequelize/sequelize-auto/badges/coverage.svg)](https://codeclimate.com/github/sequelize/sequelize-auto/coverage)
+with SWA fix for SMALLDATETIME for MSSQL
 
 Automatically generate models for [SequelizeJS](https://github.com/sequelize/sequelize) via the command line.
 
-## Install
+## Install from npm but then alter the ./lib/index.js file (as per lines 329 to 344 of this repo)
 
     npm install -g sequelize-auto
+    then alter the ./lib/index.js file (as per lines 329 to 344 of this repo)
+    
+    then run it node ./node_modules/sequelize-auto/bin/sequelize-auto -h "localhost" -d "db" -u "user" -x "password$"  --dialect "mssql"  -o "./models" -t "actual_table_name"
 
 ## Prerequisites
 
