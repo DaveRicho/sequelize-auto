@@ -4,7 +4,7 @@ with SWA fix for SMALLDATETIME for MSSQL
 
 Automatically generate models for [SequelizeJS](https://github.com/sequelize/sequelize) via the command line.
 
-## Install from npm but then alter the ./lib/index.js file (as per lines 329 to 344 of this repo)
+## Install from npm but then alter the ./lib/index.js file (down around the 280-300 lin area of this repo)
 
     npm install -g sequelize-auto
     then alter the ./lib/index.js file (as per lines 329 to 344 of this repo)
