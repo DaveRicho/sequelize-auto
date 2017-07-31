@@ -1,12 +1,14 @@
 # Sequelize-Auto
 
 with SWA fix for SMALLDATETIME for MSSQL
+takes a dependency on moment.js in each model
 
 Automatically generate models for [SequelizeJS](https://github.com/sequelize/sequelize) via the command line.
 
 ## Install from npm but then alter the ./lib/index.js file (down around the 280-300 lin area of this repo)
 
     npm install -g sequelize-auto
+    npm install --save moment
     then alter the ./lib/index.js file (as per lines 329 to 344 of this repo)
     
     then run it node ./node_modules/sequelize-auto/bin/sequelize-auto -h "localhost" -d "db" -u "user" -x "password$"  --dialect "mssql"  -o "./models" -t "actual_table_name"
